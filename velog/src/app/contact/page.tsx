@@ -1,4 +1,4 @@
-import EmailForm from '../componets/EmailForm';
+import EmailForm from '../components/EmailForm';
 
 export default function Contact() {
 	return (
