@@ -1,6 +1,6 @@
 'use client';
 
-import { signOut, useSession } from 'next-auth/react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 
 export default function Header() {
@@ -37,12 +37,12 @@ export default function Header() {
 							로그아웃
 						</button>
 					) : (
-						<Link
-							href="/login"
+						<button
+							onClick={() => signIn()}
 							className="bg-blue-400 p-2 rounded-md"
 						>
 							로그인
-						</Link>
+						</button>
 					)}
 				</li>
 			</ul>

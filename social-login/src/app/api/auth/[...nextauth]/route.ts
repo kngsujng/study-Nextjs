@@ -18,6 +18,14 @@ export const authOptions = {
 			clientSecret: process.env.NAVER_SECRET || '',
 		}),
 	],
+	pages: {
+		signIn: '/auth/signin',
+	},
+	callbacks: {
+		async signIn() {
+			return true;
+		},
+	},
 };
 
 const handler = NextAuth(authOptions);
